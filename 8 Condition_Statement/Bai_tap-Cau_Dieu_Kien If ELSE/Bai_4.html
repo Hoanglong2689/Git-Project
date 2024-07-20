@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><script>
+    function check2() {
+    let numa2 = +document.getElementById('numbera').value;
+    let numb2 = +document.getElementById('numberb').value;
+    let numc2 = +document.getElementById('numberc').value;
+
+    if (numa2 >= numb2 && numa2 >= numc2) {
+    document.getElementById("kqua").innerHTML = 'Số Lớn Nhất Là ' + numa2;
+} else if (numb2 >= numc2 && numb2 >= numa2) {
+    document.getElementById("kqua").innerHTML = 'Số Lớn Nhất Là ' + numb2;
+} else if (numc2 >= numa2 && numc2 >= numb2) {
+    document.getElementById("kqua").innerHTML = 'Số Lớn Nhất Là ' + numc2;
+}
+}
+</script>
+</body>
+</html>
