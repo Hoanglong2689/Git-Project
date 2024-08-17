@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Temperature Converter</h1>
+<td>Type a value in the Fahrenheit field to convert to Celsius:</td>
+<p>
+    <label>Fahrenheit</label>
+    <input id="nhapDoF" type="number" placeholder="Fahrenheit"
+           oninput="chuyenDoiNhietDo(this.value)"
+           onchange="chuyenDoiNhietDo(this.value)">
+</p>
+<p>Celsius: <span id="xuatDoC"></span></p>
+<script>
+    function chuyenDoiNhietDo(valNum){
+valNum = parseFloat(valNum);
+document.getElementById("xuatDoC").innerHTML = (valNum-32)/1.8;
+    }
+</script>
+</body>
+</html>

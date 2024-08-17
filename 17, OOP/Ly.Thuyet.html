@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   /* Tính Chất của OOP
+    - Encapsulation ( tính bao đóng)
+    + là tính chất cho phép đóng gói các phương thức, thuộc tính của đối
+    tượng của 1 đơn vị duy nhất.
+    + với đơn vị encapsulation giúp chúng ta ngăn chặn đuợc sự truy cập
+    không đuợc cho phép từ bên ngoài đối tượng.
+    *Set* thiết lập giá trị mới cho thuộc tính
+    VD: setName(newName){
+        this.#name=newName
+    }
+    * Get* trả về giá trị hiện tại của thuộc tính
+    VD: getName(){
+        return this.#name
+    }
+
+    - Inheritance(Tính Kế Thừa)
+    + Là tính chất cho phép lớp con (subclass) có thể kế thừa lại những thuộc
+    tính, hành vi của lớp cha (super Class) mà không cần khai báo lại
+    + tính kế thừa giúp tái sử dụng mã nguồn, giảm thiểu độ phức tạp,
+        độ lớn của chương trình.
+
+    -Abstraction- tính trừu tượng
+    + là tính chất đề cập đến việc ẩn đi các chi tiết triển khai bên trong.
+    chỉ hiển thị các tính năng cần thiết.
+    + Ngoài ra tính trừu tượng giúp chúng ta loại bỏ đi các thành phần không
+    cần thiết để giảm độ phức tạp.
+
+    -Polymorphism ( tính đa hình)
+    + là tính chất cho phép cùng 1 đối tượng có thể hiện khác nhau tuỳ thời điểm
+    + Ngoài ra tính đa hình cho phép nhiều đối tượng khác nhau có sự thể hiện
+    khác nhau cho cùng 1 hành vi
+    */
+  // extends là 1 từ khoá cho phép 1 lớp kế thừa 1 lớp khác
+   class Parent {
+       constructor(name, age,email) {
+           this.name = name;
+           this.age = age;
+       }
+
+       setName(newName) {
+           this.name = newName
+       }
+
+       getName() {
+           return this.name;
+       }
+   }
+   class Child extends Parent {
+       constructor(name,age,email) {
+           // super() gọi đến constructor của lớp cha
+           super(name,age);
+           this.email = email;
+       }
+
+
+   }
+   let child = new Child("Dang Hoang long", 23, 'dhg.long10@');
+   child.setName("Nguyen Linh Trang");
+   console.log(child.getName())
+   console.log(child.name);
+</script>
+</body>
+</html>

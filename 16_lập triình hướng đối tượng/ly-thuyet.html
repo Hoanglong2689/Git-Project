@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+   1.Lập trình hướng đối tượng (object oriented programming) là gì ?
+  - OOP (object oriented programming)- là kỹ thuật cho phép lập trình viên
+  ánh xạ các đối tượng ngoại thực tế vào lập trình.
+   2. Tại sao nên học và sử dụng Lập trình hướng đối tượng (OOP)
+   3. Lớp là gì?
+   - Đối tượng ( object) trong lập trình bao gồm tất cả các đồ vật,
+    con người , vvv
+   - Đối tượng bao gồm
+   + thuộc tính ( property): mô tả đặc điểm của đối tượng
+   + hành vi, phương thức ( behavior): mô tả chức năng, hành động
+   của đối tượng.
+
+   cách để khai báo 1 lớp
+   Có 3 cách
+   - C1: sử dụng singleton class
+   let dog = {
+           name: "kiki",
+           age: 2,
+           hairColor: "white",
+           say(){
+           console.log("gâu gâu")
+           }
+          } console.log(dog.name);
+          dog.say()
+    -C2: sử dụng function để tạo class
+    -C3: sử dụng từ khóa class trong ES6 để khai báo class(*quan trọng*)
+    VD Tạo 1 class học viên có các thuộc tính
+    Tên
+    Tuổi
+    Email
+    Hành vi giới thiệu bản thân
+    Hành vi học
+    **Constructor- Hàm khởi tạo là hàm được sử dụng để tạo ra các
+    đối tượng từ class
+    Và hàm Constructor thường chứa thuộc tính của class**
+    ** Từ khóa this trong class, giúp chương trình hiểu được
+    lập trình đang muốn trỏ đến thuộc tính hoặc hành vi của lớp hiện tại**
+
+ * */
+    class Student {
+        //đây là class body
+        constructor() {
+            this.name;
+            this,age;
+            this.email;
+        }
+        showInformation(){
+            console.log('tên:  ' + this.name )
+        }
+        learn(subject){
+            console.log("Đang học môn:  "+ subject)
+        }
+    }
+    let student = new Student("Long", 25," dhglong10@gmail.com")
+    let student1= new Student("Trang", 25," Tranglinhng@gmail.com")
+    console.log(student);
+    console.log(student.name)
+    // để thay đổi thuộc tính
+    student.setName(" Hoàng Long")
+    console.log(student)
+    console.log(student1);
+    console.log(student.showInformation())
+    student.learn("IT")
+
+
+
+
+
+</script>
+</body>
+</html>

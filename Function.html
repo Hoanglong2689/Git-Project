@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    Hàm là gì?
+    Hàm là tập hợp của 1 hoặc nhiều câu lệnh được
+    sử dụng để thực hiện 1 Nv nhất định
+
+    Quy tắc đặt tên cho hàm:
+    + tương tự với quy tắc đặt tên biến. Tuy nhiên thay vì
+    danh từ như tên biến thì hàm sẽ là động từ
+
+    Lợi ích của việc sử dụng Hàm
+    + chia nhỏ 1 chức năng để giải quyết việc dễ dàng hơn.
+    + Tái sử dụng mã nguồn giúp code được rút gọn, tránh việc trùng lặp và thừa thải
+    + dễ dàng cho việc bảo trì, sửa chữa.
+
+    Khai báo hàm trong JS
+    + Cú pháp cơ bản:
+  function functionName(list of parameter){
+/function body
+  }
+
+   Tham Số, đối số là gì
+
+Truyền tham trị và truyền tham chiếu
+
+Truyền tham trị là gì ? là cơ chế cho phép truyền kiểu
+tham trị( kiểu nguyên thủy) vào hàm như là đối số và sau khi lời gọi hàm kêết thúc
+thì giá trị ban đầu của biến không thay đổi.
+VD:
+
+let number = 5
+    function doSth(num){
+    num++;
+    console.log("trong ham: " + num);
+    }
+    doSth(number);
+console.log("ngoai ham :" + number)
+
+ Truyền tham chiếu là cơ chế cho phép truyền biến ( đối số)
+ có kiểu tham chiếu
+ vào bên trong hàm. Sau khi lời gọi hàm kết thúc,
+ giá trị ban đầu của biến ( đối số) có thể bị thay đổi
+ */
+    let number = [5]
+    function doSth(num){
+        num++;
+        console.log("trong ham: " + num);
+    }
+    doSth(number);
+    console.log("ngoai ham :" + number)
+</script>
+</body>
+</html>

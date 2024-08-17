@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1></h1>
+<script>
+  function Trans() {
+        let engArr = ['Banana', 'Orange', 'Mango', 'Jackfruit', 'Dorian', 'Eat', 'Fruit', 'Cat', 'Dog', 'Tiger', 'animal'];
+        let vieArr = ['Quả chuối', 'Quả cam', 'Quả xoài', 'Quả mít', 'Sầu Riêng', 'ăn', 'Quả', 'Mèo', 'Chó', 'Hổ', 'Động vật'];
+        let result = '';
+        string = document.getElementById('searchFor').value;
+        if (document.getElementById('chosen').value === 'vietnamese') {
+            for (let i = 0; i < engArr.length; i++) {
+                if (string === vieArr[i]) {
+                    result = engArr[i];
+                    break;
+                }
+            }
+        } else {
+            for (let i = 0; i < engArr.length; i++) {
+                if (string === engArr[i]) {
+                    result = vieArr[i];
+                }
+            }
+        }
+        document.getElementById('screen').innerHTML = result;}
+</script>
+</body>
+</html>

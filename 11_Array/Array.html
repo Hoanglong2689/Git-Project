@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><script>
+// có 3 cách khai báo mảnh
+//Cách 1 khai báo và khởi tạo trực tiếp
+// let array = []
+//let arrNumber = [];
+//Cách 2: khai báo và khởi taọ qua constructor ( hàm khởi tạo) của mảng
+// let array= new Array()
+//Cách 3: biến tấu của cách 2 bỏ đi từ khóa new
+// thực hành cách 1
+//let numbers= [23,12,4,12,13];
+//let arrstring= ["Long",'Dương','Tuan']
+//console.log(numbers.length);
+//console.log(arrstring.length);
+//console.log(numbers[1]);
+
+//Push() : thêm phần tử vào cuối mảng
+//Pop (): xóa 1 phần tử ở cuối mảng  và trả về phần từ bị xóa;
+// nếu để hiện thị thì nó sẽ trả về phần từ của thằng bị xóa
+//Shift()xóa 1 phần tử ở đầu mảng  và trả về phần từ bị xóa
+//Unshift() thêm phần tử vào Đầu mảng
+// reverse() Đảo vị trí các phần tử trong mảng
+// cuối lên đầu và đầu xuống cuối
+// concat(mảng 1, mảng 2) Nối 2 hoặc nhiều mảng vào với nhau
+// join() - toString(): chuyển mảng thành chuỗi
+/* Splice() thêm hoặc xóa phần từ ở vị trí bất kì
+* Splice(a,b,.....c)a là vị trí phần tử
+* b là số lượng phần tử muốn xóa
+* sau b là thêm phần tử , ...... c
+*
+* Mảng đa chiều
+* là mảng có các phần tử con của nó là 1 mảng 1 chiều
+* VD: Let arr2D = [ [] , [] , [], []  ]
+*
+*
+Cho người dùng khởi tạo mảng 2 chiều với kích thước 3 *3
+
+
+ let arr2D = []
+for (let i = 0; i < 3; i++) {
+    arr2D[i]=[];
+    for (let j = 0; j < 3; j++) {
+        arr2D[i][j]= +prompt("nhâập vào phẩn tử của mảng")
+    }
+}
+
+Cho người dùng khởi tạo mảng 2 chiều với kích thước m*n
+*
+*
+let m = +prompt("Nhập kích thước mảng cha")
+let n = +prompt("Nhập kích thước mảng con")
+let arr2D = []
+for (let i = 0; i < m; i++) {
+    arr2D[i]=[];
+    for (let j = 0; j < n; j++) {
+        arr2D[i][j]= +prompt("nhâập vào phẩn tử của mảng")
+    }
+}
+console.log(arr2D)
+*
+*
+* Hàm indexOf: trả về vị trí đầu tiên của phần tử trong mảng
+* và trả về -1 nếu như phần tử không tổn tại trong mảng
+*
+* Hàm lastIndexOf: trả về vị trí cuối cùng của phần tử trong mảng
+* và trả về -1 nếu như phần tử không tổn tại trong mảng
+*
+* Hàm includes : Kiểm tra xem phần tử có trong
+*  mảng hay không.
+*
+* */
+
+</script>
+</body>
+</html>

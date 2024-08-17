@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><label for="Scale">Scale</label></th>
+        <th>From Foot To Meter And Back</th>
+
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Scale"></td>
+        <td>
+            <select id="From">
+                <option value="Meter">Meter</option>
+                <option value="Foot">Foot</option>
+            </select>
+        </td>
+        <td>
+            <select id="To">
+                <option value="Meter">Meter</option>
+                <option value="Foot">Foot</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="ChangeScale()">Convert</button>
+        </td>
+    </tr>
+</table>
+<br>
+<p id="Result"></p>
+<script>
+    function ChangeScale() {
+        let Scale = document.getElementById("Scale").value;
+        let FromS = document.getElementById("From").value;
+        let To = document.getElementById("To").value;
+        let Result;
+
+
+        if (FromS == "Meter" && To == "Foot") {
+            Result = "Result: " + (Scale * 3.279) + " Foot ";
+        } else if (FromS == "Foot" && To == "Meter") {
+            Result = "Result: " + (Scale * 0.305) + " Meter";
+        } else if (FromS == "Meter") {
+            Result = "Result: " + Scale + " Meter"
+        } else {
+            Result = "Result: " + Scale + " Foot"
+        }
+        "Foot" && To == "Meter"
+        document.getElementById("Result").innerHTML = Result;
+    }
+</script>
+</body>
+</html>

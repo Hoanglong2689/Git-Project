@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let e = +prompt("nhap diem tieng anh cua ban ?")
+    let m = +prompt(("nhap diem toan cua ban ?"))
+    let l = +prompt(" Nhap diem van cua ban ?")
+    let midTerm = +prompt("nhap diem giua ki cua ban ?")
+    let final = +prompt(" Nhap diem cuoi ki cua ban ?")
+    tongKet = (e + m + l + midTerm + final) / 5
+    if (tongKet > 8) {
+        alert("HSG")
+    } else if (tongKet > 5 && tongKet <= 8) {
+        alert("HSK")
+    } else {
+        alert("HSTB")
+    }
+</script>
+</body>
+</html>

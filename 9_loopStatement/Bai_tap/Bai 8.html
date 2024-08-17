@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="choi()">Chơi</button>
+<script>
+    function choi() {
+        let number = +prompt("Số bạn muốn nhập trong khoảng lớn nhất là bao nhiêu ???")
+        let numberRandom = Math.floor(Math.random() * number);
+        console.log(numberRandom)
+        let numberCheck = +prompt("Nhập Số mà bạn muốn đoán")
+        let count = 0
+        while (numberRandom !== numberCheck) {
+            count++;
+            if (count == 4) {
+                alert("Bạn đã hết lượt đoán");
+                break;
+            } else if (numberCheck < numberRandom) {
+                alert("Số đoán của bạn bé hơn");
+
+            } else ("Số Đoán của bạn lớn hơn");
+            numberCheck = prompt("Nhập lại số bạn đoán nhé")
+        }
+        if (count == 4) {
+           document.write("Bạn đã hết lượt đoán")
+        } else {
+            document.write("Bạn Đã Đoán Đúng. Xin Chúc Mừng")
+        }
+    }
+</script>
+</body>
+</html>

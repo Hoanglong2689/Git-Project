@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Let Find A Star</h1>
+<p>
+    <label> Input The Number You Wanted To Check Below</label><br>
+    <input id="checkStars" type="text"><br>
+    <button onclick="checkStars()">Check</button>
+</p>
+<p id="result"></p>
+<script>
+    function checkStars() {
+        let Stars1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+        let Stars2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa  Major', 'Leo']
+        let result = 'Không tìm thấy sao'
+        let star = document.getElementById("checkStars").value
+        for (let i = 0; i < Stars1.length; i++) {
+            if (star === Stars1[i]) {
+                result = Stars2[i]
+                break
+            }
+        }
+        document.getElementById("result").innerHTML = result
+    }
+</script>
+</body>
+</html>
