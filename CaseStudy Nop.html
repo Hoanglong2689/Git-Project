@@ -49,10 +49,17 @@
         #cart-list {
             margin-top: 20px;
         }
+        body, html {
+            background-image: url('https://i.pinimg.com/originals/8f/1a/b8/8f1ab8b14a55720d6859620a6f596933.jpg');
+            background-repeat: repeat;
+            background-size:cover ;
+            background-position: center ;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
-<nav class="navbar bg-light">
+<nav class="navbar bg-light" >
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXBzaHBhbDJla2dlMGxic214Y21jNWtnZzU1YTg5aDBpdTd0ajN4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NqyYi5uEWJEsIUD8mv/giphy.webp"
@@ -62,8 +69,11 @@
     </div>
 </nav>
 
-<div id="login-section" class="container text-center">
-    <h2 class="text-danger">Đăng Nhập</h2>
+<div id="login-section" class="container text-center" >
+    <h2>Đăng Nhập</h2>
+    <div class="container-fluid">
+        <img src='https://i.gifer.com/origin/ac/acf3abb6da430dd78cc99f925bb52d49_w200.webp'
+             alt="Logo" width="60" height="80" class="d-inline-block align-text-top">
     <form id="login-form">
         <label for="username">Tên người dùng:</label>
         <input type="text" id="username" required>
@@ -75,7 +85,7 @@
 
 <div id="shop-section" style="display:none;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Nintendo.svg/900px-Nintendo.svg.png" alt="Logo"
-         width="600" height="100" class="center">
+         width="600" height="100" class="center" border="10">
     <div id="product-list" class="row"></div>
     <button id="view-cart" style="display:none;" onclick="viewCart()"><i class='bx bxs-shopping-bag'></i> Xem Giỏ Hàng
     </button>
@@ -165,10 +175,10 @@
             let innerHTML = `<table class="table table-striped">
                 <thead>
                     <tr>
-                        <th class="text-bg-danger p-3">Tên sản phẩm</th>
-                        <th>Số lượng</th>
-                        <th>Giá</th>
-                        <th colspan="${isAdmin ? 3 : 1}">Hành động</th>
+                        <th class="text-bg-primary p-3">Tên sản phẩm</th>
+                        <th class="text-bg-warning p-3">Số lượng</th>
+                        <th class="text-bg-warning p-3">Giá</th>
+                        <th colspan="${isAdmin ? 3 : 1}" class="text-bg-primary p-3">Hành động</th>
                     </tr>
                 </thead>
                 <tbody>`;
