@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1- Final Module 1</title>
+</head>
+<body>
+
+<h1>Tìm bội chung của 3 và 5 trong mảng và tổng của chúng</h1>
+<form id="numberForm">
+    <label for="numbers">Nhập các Số Nguyên mà bạn muốn ( nhớ thêm dấu phẩy giữa các số nhé)  :</label>
+    <input type="text" id="numbers" name="numbers">
+    <button type="submit">Tính tổng</button>
+</form>
+<p id="result"></p>
+
+<script>
+    document.getElementById('numberForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let input = document.getElementById('numbers').value;
+        let numbers = input.split(',').map(num => parseInt(num.trim()));
+        if (numbers.length > 20) {
+            document.getElementById('result').innerText = 'Số lượng phần tử không vượt quá 20.';
+            return;
+        }
+        let multiples = [];
+        let totalSum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            let num = numbers[i];
+            if (num % 3 === 0 && num % 5 === 0) {
+                multiples.push(num);
+                totalSum += num;
+            }
+        }
+        document.getElementById('result').innerText = `Các số là bội chung của 3 và 5: ${multiples.join(', ')}\nTổng của các số là: ${totalSum}`;
+    });
+</script>
+</body>
+</html>

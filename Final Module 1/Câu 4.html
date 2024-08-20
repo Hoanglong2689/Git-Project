@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 4-</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Quản lý Khách Hàng</h1>
+    <form id="customerForm">
+        <label for="customerId">Mã khách hàng:</label>
+        <input type="text" id="customerId" required>
+        <label for="customerName">Tên khách hàng:</label>
+        <input type="text" id="customerName" required>
+        <label for="phoneNumber">Số điện thoại:</label>
+        <input type="text" id="phoneNumber" required>
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <button type="submit">Thêm Khách Hàng</button>
+    </form>
+    <table id="customerTable">
+        <thead>
+        <tr>
+            <td>Mã Khách Hàng</td>
+            <td>Tên Khách Hàng</td>
+            <td>Số Điện Thoại</td>
+            <td>Địa Chỉ</td>
+            <td>Email</td>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+<script>
+    let khachHang = [];
+    function addCustomer(customer) {
+        khachHang.push(customer);
+        updateCustomerTable();
+    }
+    function updateCustomerTable() {
+        let tableBody = document.querySelector('tbody');
+        tableBody.innerHTML = '';
+
+        khachHang.forEach(customer => {
+            let row = document.createElement('tr');
+            Object.values(customer).forEach(value => {
+                let cell = document.createElement('td');
+                cell.textContent = value;
+                row.appendChild(cell);
+            });
+
+            tableBody.appendChild(row);
+        });
+    }
+    document.getElementById('customerForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let customerId = document.getElementById('customerId').value;
+        let customerName = document.getElementById('customerName').value;
+        let phoneNumber = document.getElementById('phoneNumber').value;
+        let address = document.getElementById('address').value;
+        let email = document.getElementById('email').value;
+
+        let customer = {
+            id: customerId,
+            name: customerName,
+            phone: phoneNumber,
+            address: address,
+            email: email
+        };
+        addCustomer(customer);
+        document.getElementById('customerForm').reset();
+    });
+</script>
+</body>
+</html>

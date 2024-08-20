@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Hàm để đếm số lượng cặp số có tổng chia hết cho k
+    function countPairs(arr, k) {
+        let count = 0;
+        const n = arr.length;
+
+        for (let i = 0; i < n; i++) {
+            for (let j = i + 1; j < n; j++) {
+                if ((arr[i] + arr[j]) % k === 0) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    // Nhập số lượng phần tử của mảng
+    let n = parseInt(prompt("Nhập số lượng phần tử của mảng (tối đa 50):"), 10);
+    if (isNaN(n) || n <= 0 || n > 50) {
+        alert("Số lượng phần tử không hợp lệ. Vui lòng nhập lại từ 1 đến 50.");
+    } else {
+        let arr = [];
+
+        // Nhập các phần tử của mảng
+        for (let i = 0; i < n; i++) {
+            let element = parseInt(prompt(`Nhập phần tử ${i + 1} của mảng:`), 10);
+            if (!isNaN(element)) {
+                arr.push(element);
+            } else {
+                alert("Phần tử không hợp lệ. Vui lòng nhập lại.");
+                i--; // Yêu cầu nhập lại phần tử này
+            }
+        }
+        let k = parseInt(prompt("Nhập số nguyên dương k:"), 10);
+        if (isNaN(k) || k <= 0) {
+            alert("Giá trị k không hợp lệ. Vui lòng nhập một số nguyên dương.");
+        } else {
+            // Đếm các cặp số và hiển thị kết quả
+            let result = countPairs(arr, k);
+            alert(`Số lượng cặp số trong mảng có tổng chia hết cho ${k} là: ${result}`);
+        }
+    }
+</script>
+</body>
+</html>

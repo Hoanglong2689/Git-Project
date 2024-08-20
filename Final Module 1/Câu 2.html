@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2-Final Module 1</title>
+</head>
+<body>
+<script>
+    let diemThi = +prompt("Vui lòng nhập điểm của bạn");
+    if (diemThi < 50) {
+        alert("Bạn đã trượt");
+    } else {
+        function lamTron(diemThi) {
+            let boiSoCua5 = Math.ceil(diemThi / 5) * 5;
+            if (boiSoCua5 - diemThi < 3) {
+                if (boiSoCua5 >= 50) {
+                    return boiSoCua5;
+                } else {
+                    return diemThi;
+                }
+            } else {
+                return diemThi;
+            }
+        }
+        let diemLamTron = lamTron(diemThi);
+        alert("Điểm thi của bạn là: " + diemLamTron + ". Xin chúc mừng!");
+    }
+</script>
+</body>
+</html>
